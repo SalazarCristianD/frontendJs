@@ -1,27 +1,24 @@
 const menuEmail = document.querySelector('.navbar-email');
-const desktopMenu = document.querySelector(".desktop-menu");
-
-
 const menuHamIcon = document.querySelector('.menu');
-const mobileMenu = document.querySelector('.mobile-menu');
-
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cart")
-const aside = document.querySelector('.product-detail');
+const desktopMenu = document.querySelector(".desktop-menu");
+const mobileMenu = document.querySelector('.mobile-menu');
+const shoppingCardContainer =fdocument.querySelector('#shoppingCartContainer');
 
 const cardContainer = document.querySelector('.cards-container')
 
-menuCarritoIcon.addEventListener("click", toggleCarritoAside);
+menuCarritoIcon.addEventListener("click", toggleCarritoshoppingCardContainer);
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 
 
-function toggleCarritoAside(){
+function toggleCarritoshoppingCardContainer(){
 
 
 
     mobileMenu.classList.add('inactive');
-    aside.classList.toggle('inactive');
+    shoppingCardContainer.classList.toggle('inactive');
     desktopMenu.classList.add('inactive')
 
     
@@ -31,23 +28,23 @@ function toggleDesktopMenu(){
    /*
     código de la clase 
 
-   const isAsideClosed = aside.classList.contains('inactive');
-   if(!isAsideClosed){
-    aside.classList.add('inactive')
+   const isshoppingCardContainerClosed = shoppingCardContainer.classList.contains('inactive');
+   if(!isshoppingCardContainerClosed){
+    shoppingCardContainer.classList.add('inactive')
    }
 
    desktopMenu.classList.toggle('inactive')
    */
 
     mobileMenu.classList.add('inactive');
-    aside.classList.add('inactive');
+    shoppingCardContainer.classList.add('inactive');
     desktopMenu.classList.toggle('inactive')
 
 }
 
 function toggleMobileMenu(){
     mobileMenu.classList.toggle('inactive');
-    aside.classList.add('inactive');
+    shoppingCardContainer.classList.add('inactive');
     desktopMenu.classList.add('inactive')
 
 }
